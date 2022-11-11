@@ -31,10 +31,11 @@ namespace UserMaintenance
         {
             this.listUsers = new System.Windows.Forms.ListBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblFullName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // listUsers
@@ -53,35 +54,26 @@ namespace UserMaintenance
             this.txtFullName.Size = new System.Drawing.Size(184, 23);
             this.txtFullName.TabIndex = 1;
             // 
-            // txtFirstName
-            // 
-            this.txtFirstName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtFirstName.Location = new System.Drawing.Point(426, 89);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(184, 23);
-            this.txtFirstName.TabIndex = 2;
-            // 
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
             this.lblFullName.Location = new System.Drawing.Point(355, 42);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(65, 15);
+            this.lblFullName.Size = new System.Drawing.Size(57, 15);
             this.lblFullName.TabIndex = 3;
-            this.lblFullName.Text = "Vezetéknév";
+            this.lblFullName.Text = "Teljes név";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Location = new System.Drawing.Point(355, 92);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(63, 15);
+            this.lblFirstName.Size = new System.Drawing.Size(0, 15);
             this.lblFirstName.TabIndex = 4;
-            this.lblFirstName.Text = "Keresztnév";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(367, 144);
+            this.btnAdd.Location = new System.Drawing.Point(366, 92);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(243, 37);
             this.btnAdd.TabIndex = 5;
@@ -89,15 +81,29 @@ namespace UserMaintenance
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(366, 155);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(192, 32);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Fájlba írás";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 352);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblFullName);
-            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.listUsers);
             this.Name = "Form1";
@@ -111,10 +117,11 @@ namespace UserMaintenance
 
         private System.Windows.Forms.ListBox listUsers;
         private System.Windows.Forms.TextBox txtFullName;
-        private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
