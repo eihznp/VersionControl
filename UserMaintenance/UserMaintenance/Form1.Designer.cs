@@ -75,9 +75,9 @@ namespace UserMaintenance
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Location = new System.Drawing.Point(355, 92);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(63, 15);
+            this.lblFirstName.Size = new System.Drawing.Size(45, 15);
             this.lblFirstName.TabIndex = 4;
-            this.lblFirstName.Text = "Keresztnév";
+            this.lblFirstName.Text = "Utónév";
             // 
             // btnAdd
             // 
