@@ -42,5 +42,13 @@ namespace UserMaintenance
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (listUsers.SelectedIndex >= 0)
+            {
+                listUsers.Items.RemoveAt(listUsers.SelectedIndex);
+            }
+        }
     }
 }
