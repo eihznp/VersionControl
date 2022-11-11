@@ -30,9 +30,9 @@ namespace UserMaintenance
         private void InitializeComponent()
         {
             this.listUsers = new System.Windows.Forms.ListBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblFullName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,12 +46,12 @@ namespace UserMaintenance
             this.listUsers.Size = new System.Drawing.Size(287, 289);
             this.listUsers.TabIndex = 0;
             // 
-            // txtLastName
+            // txtFullName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(426, 39);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(184, 23);
-            this.txtLastName.TabIndex = 1;
+            this.txtFullName.Location = new System.Drawing.Point(426, 39);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(184, 23);
+            this.txtFullName.TabIndex = 1;
             // 
             // txtFirstName
             // 
@@ -61,14 +61,14 @@ namespace UserMaintenance
             this.txtFirstName.Size = new System.Drawing.Size(184, 23);
             this.txtFirstName.TabIndex = 2;
             // 
-            // lblLastName
+            // lblFullName
             // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(355, 42);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(65, 15);
-            this.lblLastName.TabIndex = 3;
-            this.lblLastName.Text = "Vezetéknév";
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Location = new System.Drawing.Point(355, 42);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(65, 15);
+            this.lblFullName.TabIndex = 3;
+            this.lblFullName.Text = "Vezetéknév";
             // 
             // lblFirstName
             // 
@@ -96,9 +96,9 @@ namespace UserMaintenance
             this.ClientSize = new System.Drawing.Size(663, 352);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.lblLastName);
+            this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.txtFirstName);
-            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.listUsers);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -110,9 +110,9 @@ namespace UserMaintenance
         #endregion
 
         private System.Windows.Forms.ListBox listUsers;
-        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Button btnAdd;
     }
