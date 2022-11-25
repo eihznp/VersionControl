@@ -12,9 +12,17 @@ namespace tasks4
 {
     public partial class Form1 : Form
     {
+        RealEstateEntities2 context = new RealEstateEntities2();
+        List<Flat> Flats;
         public Form1()
         {
             InitializeComponent();
+            LoadData();
         }
+        private void LoadData()
+        {
+            Flats = context.Flat.ToList();
+        }
+
     }
 }
