@@ -73,12 +73,53 @@ namespace tasks4
             object[,] values = new object[Flats.Count, headers.Length];
 
             int counter = 0;
+            Excel.Range r;
+
+            for (int i = 0; i < headers.Length; i++)
+            {
+                xlSheet.Cells[1, i + 1] = headers[i];
+            }
+
             foreach (Flat f in Flats)
             {
                 values[counter, 0] = f.Code;
+                values[counter, 1] = f.Vendor;
+                values[counter, 2] = f.Side;
+                values[counter, 3] = f.District;
+                values[counter, 4] = f.Elevator;
+                values[counter, 5] = f.NumberOfRooms;
+                values[counter, 6] = f.FloorArea;
+                values[counter, 7] = f.Price;
                 values[counter, 8] = "";
                 counter++;
             }
+
+            r = xlSheet.get_Range(GetCell(2, 1),
+                       GetCell(Flats.Count + 1, headers.Length));
+            r.Value = values;
+            r = xlSheet.get_Range(GetCell(2, 9),
+                        GetCell(Flats.Count, 9));
+            r.Value = "=1000000*" + GetCell(2, 8) + "/" + GetCell(2, 7);
+
+            Excel.Range headerRange = xlSheet.get_Range(GetCell(1, 1), GetCell(1, headers.Length));
+            headerRange.Font.Bold = true;
+            headerRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+            headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            headerRange.EntireColumn.AutoFit();
+            headerRange.RowHeight = 40;
+            headerRange.Interior.Color = Color.LightBlue;
+            headerRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+
+            r = xlSheet.UsedRange;
+            r.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+            r = xlSheet.get_Range(GetCell(2, 1),
+                        GetCell(Flats.Count + 1, 1));
+            r.Font.Bold = true;
+            r.Interior.Color = Color.LightYellow;
+            r = xlSheet.get_Range(GetCell(2, 9),
+                        GetCell(Flats.Count + 1, 9));
+            r.Interior.Color = Color.LightGreen;
+            r.NumberFormat = "0.00";
 
         }
         private string GetCell(int x, int y)
