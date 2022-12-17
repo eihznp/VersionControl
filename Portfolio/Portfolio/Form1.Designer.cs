@@ -36,9 +36,9 @@ namespace Portfolio
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(338, 140);
+            this.dataGridView1.Location = new System.Drawing.Point(198, 140);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(380, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // Form1

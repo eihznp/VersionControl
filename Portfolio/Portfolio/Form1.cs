@@ -17,7 +17,7 @@ namespace Portfolio
         public Form1()
         {
             InitializeComponent();
-            Ticks = context.Ticks.ToList();
+            Ticks = context.Tick.ToList();
             dataGridView1.DataSource = Ticks;
         }
     }
